@@ -1,0 +1,297 @@
+:root {
+    --c1: #eeeeee;
+    --c2: #f9c49a;
+    --c3: #ec823a;
+    --c4: #7c3c21;
+    --facebook: rgb(59, 89, 152);
+    --twitter: rgb(0, 172, 238);
+    --whatsapp: #25D366;
+    --discord: #7289DA;
+    --youtube: red;
+    --instagram: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+    outline: none;
+}
+
+nav {
+    /* background-color: #fff; */
+    width: 90%;
+    /* margin: 0 auto; */
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    right: 50%;
+    margin-right: -45%;
+}
+
+nav > .logo-wrapper {
+    height: 10vh;
+    width: 11vh;
+    cursor: pointer;
+}
+
+.nav-links {
+    list-style: none;
+    /* background-color: #fff; */
+    height: 100%;
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@media screen and (max-width: 1024px) {
+    .nav-links {
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .links {
+        padding: 0.5em 1.5em;
+    }
+}
+
+.links > a {
+    text-decoration: none;
+    padding: 0.5em 2em;
+    border-radius: 20px;
+    border: 2px solid var(--c1);
+    color: var(--c1);
+    font-size: 1.2em;
+    display: block;
+    transition: background-color 0.3s;
+}
+
+.links > a:hover,
+.nav-links > .active >a {
+    background-color: var(--c1);
+    color: var(--c4);
+}
+
+.bars {
+    display: none;
+}
+
+.bars > i {
+    display: none;
+    color: var(--c1);
+    cursor: pointer;
+}
+
+.bars > .active {
+    display: block;
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    .nav-links {
+        position: fixed;
+        top: 10vh;
+        right: 0;
+        width: 100vw;
+        height: 90vh;
+        background-color: #fcb073d7;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        transform: translateX(100vw);
+        transition: transform 1s;
+    }
+
+    nav > .active {
+        transform: translateX(0);
+    }
+
+    .bars {
+        display: block;
+    }
+}
+
+img, video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.vid-box {
+    width: 100%;
+    height: 90vh;
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: -2;
+    background-color: rgba(255, 255, 255, 0.589);
+}
+
+.cover {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    background-color: #f9c59a5e;
+}
+
+.content {
+    background-color: rgb(255, 145, 0);
+}
+
+.content > h1 {
+    text-align: center;
+    padding: 1em 0;
+    font-size: 4em;
+    position: relative;
+    color: var(--c1);
+}
+
+.content > p {
+    width: 80vw;
+    margin: auto;
+    text-align: center;
+    font-size: 2em;
+    color: var(--c4);
+    padding-bottom: 1em;
+}
+
+article > .sec {
+    background: url(../img/faculty.jpg) no-repeat center center;
+    background-attachment: fixed;
+    width: 100%;
+    height: 80vh;
+}
+
+article > .txt {
+    padding: 1.3em 0;
+}
+
+.txt > .box {
+    width: 50%;
+    margin: 0 auto;
+    background-color: var(--c1);
+    padding: 1em;
+    border-radius: 20px 7px;
+}
+
+.box > h1 {
+    font-size: 2.3em;
+    text-align: center;
+    font-family: sans-serif;
+    margin-bottom: 0.2em;
+}
+
+.sec1 > .sec {
+    background: url(../img/faculty.jpg) no-repeat center center;
+    background-attachment: fixed;
+}
+
+.sec2 > .sec {
+    background: url(../img/libraary.jpg) no-repeat center center;
+    background-attachment: fixed;
+}
+
+.sec3 > .sec {
+    background: url(../img/student2.jpg) no-repeat center center;
+    background-attachment: fixed;
+}
+article.sec1 > .txt {
+    background-color: rgb(122, 59, 0);
+}
+
+article.sec2 > .txt {
+    background-color: rgb(255, 230, 0);
+}
+
+article.sec3 > .txt {
+    background-color: rgb(0, 165, 82);
+}
+
+footer {
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.74), rgba(0, 0, 0, 0.74)), url(../img/campus2.jpg);
+    background-repeat: no-repeat;
+    background-position: center 63%;
+}
+
+footer ul {
+    list-style: none;
+}
+
+footer > .imp-links,
+footer li > a,
+footer > .social-media {
+    color: var(--c1);
+    text-decoration: none;
+}
+
+footer > .imp-links {
+    width: 80%;
+    margin: 0 auto;
+    padding: 1em 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+@media screen and (max-width: 768px) {
+    footer > .imp-links {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+footer > .imp-links > div {
+    margin-bottom: 1em;
+}
+
+footer > .imp-links ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+footer > .imp-links .title {
+    margin-bottom: 0.4em;
+    border-bottom: 1px solid var(--c1);
+}
+
+.social-media > ul {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.social-media i {
+    margin: 1em;
+}
+
+.fa-facebook-f:hover {
+    background-color: var(--facebook);
+}
+
+.fa-twitter:hover {
+    color: var(--twitter);
+}
+
+.fa-whatsapp:hover {
+    color: var(--whatsapp);
+}
+
+.fa-discord:hover {
+    color: var(--discord);
+}
+
+.fa-youtube:hover {
+    color: var(--youtube);
+}

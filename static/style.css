@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Commissioner:wght@100&family=Lacquer&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lacquer', cursive;
+    --c4: #7c3c21;
+    --c1: #eeeeee;
+}
+
+
+/*.first {
+    width: 100%;
+    background-color: red;
+    background: no-repeat url("static/images/ju.jpg");
+}*/
+
+#header {
+    display: flex;
+    /* background-color: #fff; */
+    width: 100%;
+    /* margin: 0 auto; */
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    right: 43%;
+    margin-right: -45%;
+}
+
+.first {
+    width: 35%;
+}
+
+@media screen and (max-width: 1024px) {
+    .nav-links {
+        width: 70%;
+    }
+}
+
+.second {
+    width: 70%;
+    margin: 23px 2px;
+    height: 100%;
+}
+
+.second ul {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.second li {
+    list-style: none;
+    width: 100px;
+}
+
+.second li a {
+    padding: 10px;
+    text-align: center;
+    font-size: 21px;
+    font-weight: 600;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.nav-links {
+    list-style: none;
+    /* background-color: #fff; */
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#mainbody {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    z-index: -1;
+}
+
+.links>a {
+    text-decoration: none;
+    padding: 0.5em 2em;
+    border-radius: 20px;
+    border: 2px solid var(--c1);
+    color: var(--c1);
+    font-size: 1.2em;
+    display: block;
+    transition: background-color 0.3s;
+}
+
+.links>a:hover,
+.nav-links>.active>a {
+    background-color: var(--c1);
+    color: var(--c4);
+}
+
+@media screen and (max-width: 768px) {
+    .links {
+        padding: 0.5em 1.5em;
+    }
+}
